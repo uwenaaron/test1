@@ -1,7 +1,7 @@
-/
+/*
 @param {string}
 @returns {object}
-/
+*/
 function countWordFrequency(inputstring){
     if (!inputstring || typeof inputstring != string){
         return {}
@@ -9,7 +9,7 @@ function countWordFrequency(inputstring){
 
     const lowercasewords = inputstring.toLowerCase()
     const words = lowercasewords
-    .replace([,.!?],  ' ')
+    .replace(/[,.!?]/g,  ' ')
     .split(' ')
     .filer(word=>word.length > 0)
     const frequencyMap = {}
